@@ -1,0 +1,41 @@
+-- HUMAN RESOURCE MACHINE PROGRAM --
+-- 108 Cycles :-) --
+-- 26  CMDs :-( --
+
+    COMMENT  0
+a:
+b:
+    INBOX   
+    COPYTO   2
+    COPYFROM 9
+    COPYTO   0
+    COPYTO   1
+    BUMPUP   0
+    OUTBOX  
+c:
+    COPYFROM 0
+    ADD      1
+    COPYTO   1
+    SUB      2
+    JUMPN    e
+    JUMPZ    d
+    JUMP     b
+d:
+e:
+    COPYFROM 1
+    OUTBOX  
+    COPYFROM 1
+    ADD      0
+    COPYTO   0
+    SUB      2
+    JUMPN    g
+    JUMPZ    f
+    JUMP     a
+f:
+g:
+    COPYFROM 0
+    OUTBOX  
+    JUMP     c
+
+
+
